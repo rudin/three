@@ -4,7 +4,7 @@ status: Published
 categories:
   - category: Fluff
 date: '2018-03-28'
-postFeaturedImage: /images/uploads/vyouw5byhlc.jpeg
+postFeaturedImage: /images/uploads/2abc8b70a22557f057bf289ff874a24e_hd.jpg
 excerpt: This is an excerpt of Post Two
 ---
 
