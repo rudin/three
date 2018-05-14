@@ -8634,6 +8634,12 @@ style-loader@0.19.0:
     loader-utils "^1.0.2"
     schema-utils "^0.3.0"
 
+styled-system@^2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-2.2.5.tgz#95f1e2c2c9ddc5c462cc56237cf039aa9ecfd27d"
+  dependencies:
+    prop-types "^15.6.0"
+
 stylehacks@^2.2.0:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/stylehacks/-/stylehacks-2.3.2.tgz#64c83e0438a68c9edf449e8c552a7d9ab6009b0b"
@@ -8813,6 +8819,8 @@ timed-out@^4.0.0:
 timers-browserify@^2.0.4:
   version "2.0.10"
   resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.10.tgz#1d28e3d2aadf1d5a5996c4e9f95601cd053480ae"
+  dependencies:
+    setimmediate "^1.0.4"
 
 timers-ext@0.1, timers-ext@^0.1.2:
   version "0.1.2"
