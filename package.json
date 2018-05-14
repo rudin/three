@@ -46,6 +46,7 @@
     "react-markdown": "3",
     "react-router-dom": "^4.1.1",
     "react-snapshot": "^1.1.0",
+    "styled-components": "^3.2.6",
     "styled-system": "^2.2.5"
   },
   "scripts": {
