@@ -1,13 +1,15 @@
 .PageHeader {
   line-height: 1em;
   color: var(--primary);
-  background: var(--primary);
   color: white;
+  padding-bottom: 24px;
 }
 
 .PageHeader--Title {
+  color: var(--primary);
 }
 
 .PageHeader--Subtitle {
+  color: var(--primary);
   font-weight: 200;
 }

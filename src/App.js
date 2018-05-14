@@ -13,9 +13,7 @@ import Blog from './views/Blog'
 import SinglePost from './views/SinglePost'
 import Contact from './views/Contact'
 import NoMatch from './views/NoMatch'
-import Nav from './components/Nav'
 import Footer from './components/Footer'
-import GithubCorner from './components/GithubCorner'
 import ServiceWorkerNotifications from './components/ServiceWorkerNotifications'
 import AOS from './components/AOS'
 import data from './data.json'
@@ -57,7 +55,6 @@ class App extends Component {
             <AOS options={{ duration: 250 }} />
             <ScrollToTop />
             <ServiceWorkerNotifications reloadOnUpdate />
-            <GithubCorner url="https://github.com/Jinksi/netlify-cms-react-starter" />
             <Helmet
               defaultTitle={siteTitle}
               titleTemplate={`${siteTitle} | %s`}
@@ -79,7 +76,6 @@ class App extends Component {
               }
               headerScripts={headerScripts}
             />
-            <Nav />
             <Switch>
               <Route
                 path="/"

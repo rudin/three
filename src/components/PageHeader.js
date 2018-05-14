@@ -3,14 +3,19 @@ import PropTypes from 'prop-types'
 
 import BackgroundImage from './BackgroundImage'
 import './PageHeader.css'
+import Nav from './Nav'
 
 import Headline from './Headline'
 
 const PageHeader = ({ title, subtitle, backgroundImage }) => (
-  <div className="section PageHeader relative">
+  <div className="PageHeader relative">
     {backgroundImage && <BackgroundImage src={backgroundImage} opacity={0.5} />}
+    <div style={{ display: 'flex' }}>
+      <div style={{ flex: 1 }} />
+      <Nav />
+    </div>
     <div className="container relative">
-      <Headline mb={3} data-aos="fade-left">
+      <Headline mb={3} color={'primary1Color'} data-aos="fade-left">
         {title}
       </Headline>
       {subtitle ? (
