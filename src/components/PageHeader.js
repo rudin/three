@@ -10,7 +10,7 @@ import Headline from './Headline'
 const PageHeader = ({ title, subtitle, backgroundImage }) => (
   <div className="PageHeader relative">
     {backgroundImage && <BackgroundImage src={backgroundImage} opacity={0.5} />}
-    <div style={{ display: 'flex' }}>
+    <div className="container" style={{ display: 'flex' }}>
       <div style={{ flex: 1 }} />
       <Nav />
     </div>
