@@ -2,7 +2,7 @@
 title: Hello World!
 subtitle: <Home />
 ---
-# The Headline
+# The Headline, true that!
 
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](http://standardjs.com/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
