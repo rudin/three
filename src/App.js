@@ -13,11 +13,15 @@ import Blog from './views/Blog'
 import SinglePost from './views/SinglePost'
 import Contact from './views/Contact'
 import NoMatch from './views/NoMatch'
-import Footer from './components/Footer'
+import FooterContent from './components/Footer'
 import ServiceWorkerNotifications from './components/ServiceWorkerNotifications'
 import AOS from './components/AOS'
 import data from './data.json'
 import { documentHasTerm, getCollectionTerms } from './util/collection'
+import * as Layout from 'react-holy-grail-layout'
+import View from './components/Primitives'
+
+const Container = Layout.Container
 
 class App extends Component {
   state = {
@@ -51,7 +55,7 @@ class App extends Component {
     return (
       <Router>
         <ThemeProvider>
-          <div className="React-Wrap">
+          <Container>
             <AOS options={{ duration: 250 }} />
             <ScrollToTop />
             <ServiceWorkerNotifications reloadOnUpdate />
@@ -164,8 +168,10 @@ class App extends Component {
 
               <Route render={() => <NoMatch siteUrl={siteUrl} />} />
             </Switch>
-            <Footer />
-          </div>
+            <Layout.Footer>
+              <FooterContent />
+            </Layout.Footer>
+          </Container>
         </ThemeProvider>
       </Router>
     )

@@ -1,23 +1,25 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 
-import Content from '../components/Content'
+import MarkDownContent from '../components/Content'
 import PageHeader from '../components/PageHeader'
-import './Home.css'
+import { Header, Body, Content } from '../components/Layout'
 
 export default ({ page }) => {
   const { title, subtitle, body } = page
   return (
-    <main className='Home'>
-      <PageHeader title={title} subtitle={subtitle} />
-      <div className='section thin'>
-        <div className='container'>
-          <Content source={body} />
-        </div>
-      </div>
-      <Helmet>
-        <title>{title}</title>
-      </Helmet>
-    </main>
+    <Fragment>
+      <Header>
+        <PageHeader title={title} subtitle={subtitle} />
+      </Header>
+      <Body>
+        <Content>
+          <MarkDownContent source={body} />
+        </Content>
+        <Helmet>
+          <title>{title}</title>
+        </Helmet>
+      </Body>
+    </Fragment>
   )
 }
