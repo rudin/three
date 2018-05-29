@@ -47,6 +47,7 @@
     "react-markdown": "3",
     "react-router-dom": "^4.1.1",
     "react-snapshot": "^1.1.0",
+    "rebass": "^2.0.0-2",
     "styled-components": "^3.2.6",
     "styled-system": "^2.2.5"
   },

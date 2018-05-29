@@ -6,12 +6,16 @@ import './PageHeader.css'
 import Nav from './Nav'
 
 import Headline from './Headline'
+import styled from 'styled-components'
+
+import Button from './Primitives/Button'
 
 const PageHeader = ({ title, subtitle, backgroundImage }) => (
   <div className="PageHeader relative">
     {backgroundImage && <BackgroundImage src={backgroundImage} opacity={0.5} />}
     <div className="container" style={{ display: 'flex' }}>
       <div style={{ flex: 1 }} />
+      <Button>Sign up for Crew</Button>
       <Nav />
     </div>
     <div className="container relative">
