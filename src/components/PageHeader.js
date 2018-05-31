@@ -11,6 +11,7 @@ import styled from 'styled-components'
 import { color } from 'styled-system'
 
 import Button from './Button'
+import { View } from './Primitives'
 
 const Thing = styled.div`
   ${typographyStyles('headline')};
@@ -22,14 +23,27 @@ const Thang = styled.div`
   ${color};
 `
 
+const Container = View.extend.attrs({ p: 3, color: 'primary1Color' })`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`
+
+const Navigation = View.extend``
+
+const ActionButtons = View.extend``
+
 const PageHeader = ({ title, subtitle, backgroundImage }) => (
   <div className="PageHeader relative">
-    {backgroundImage && <BackgroundImage src={backgroundImage} opacity={0.5} />}
-    <div className="container" style={{ display: 'flex' }}>
-      <div style={{ flex: 1 }} />
-      <Button>Sign up for Crew</Button>
-      <Nav />
-    </div>
+    <Container>
+      <Navigation>
+        <Nav />
+      </Navigation>
+      <ActionButtons>
+        <Button>Sign up for Crew</Button>
+      </ActionButtons>
+    </Container>
+
     <div className="container relative">
       <Headline mb={3} color={'primary1Color'} data-aos="fade-left">
         {title} lala
