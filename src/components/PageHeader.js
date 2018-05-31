@@ -9,7 +9,8 @@ import Headline from './Headline'
 import { type } from '../theme'
 import styled from 'styled-components'
 import { color } from 'styled-system'
-import Button from './Primitives/Button'
+
+import Button from './Button'
 
 const Thing = styled.div`
   ${type('headline')};
