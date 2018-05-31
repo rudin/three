@@ -8,7 +8,7 @@ import Nav from './Nav'
 import Headline from './Headline'
 import styled from 'styled-components'
 
-import Button from './Primitives/Button'
+import Button from './Button'
 
 const PageHeader = ({ title, subtitle, backgroundImage }) => (
   <div className="PageHeader relative">
