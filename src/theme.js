@@ -70,7 +70,7 @@ const fontCollection = {
     bold: 700,
     size: fontSizes[2],
     lineHeight: 1,
-    letterSpacing: -2
+    letterSpacing: 0
   },
   times: {
     family: `'Times New Roman'`,
@@ -103,7 +103,7 @@ const fontCollection = {
 export const typographyStyles = {
   title: fontCollection.system,
   headline: { ...fontCollection.Rubik, size: fontSizes[5], weight: 'bold' },
-  body: fontCollection.system,
+  body: fontCollection.Rubik,
   callout: fontCollection.system,
   subhead: fontCollection.system,
   footnote: fontCollection.system,

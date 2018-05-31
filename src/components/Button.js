@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { space, color } from 'styled-system'
+import { typographyStyles } from '../util/typographyStyles'
 
 const Button = styled.button`
   display: inline-block;
@@ -20,7 +21,8 @@ const Button = styled.button`
     cursor: default;
   }
   border-radius: 99999px;
-  ${space} ${color};
+  ${space} ${color}
+  ${typographyStyles('body')}
 `
 
 Button.defaultProps = {
