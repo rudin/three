@@ -44,4 +44,15 @@ const typographyStyles = {
   caption: openSansStyle
 }
 
+usage:
+
+const Headline = styled.h1`
+  ${typographyStyles('headline')};
+  ${color};
+`
+
+override:
+
+<Headline typographyStyle="body" weight="normal">Hello World!</Headline>
+
 */
