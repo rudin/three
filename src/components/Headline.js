@@ -2,9 +2,12 @@ import styled from 'styled-components'
 import { space, color } from 'styled-system'
 
 export default styled.h1`
-  font-family: ${({ theme: { fonts } }) => fonts.headline.font};
-  font-size: ${({ theme: { fonts } }) => fonts.headline.size}px;
-  font-weight: ${({ theme: { fonts } }) => fonts.headline.bold};
+  font-family: ${({ theme: { typographyStyles } }) =>
+    typographyStyles.headline.font};
+  font-size: ${({ theme: { typographyStyles } }) =>
+    typographyStyles.headline.size}px;
+  font-weight: ${({ theme: { typographyStyles } }) =>
+    typographyStyles.headline.bold};
   ${space};
   ${color};
 `

@@ -6,19 +6,19 @@ import './PageHeader.css'
 import Nav from './Nav'
 
 import Headline from './Headline'
-import { type } from '../theme'
+import { typographyStyles } from '../util/typographyStyles'
 import styled from 'styled-components'
 import { color } from 'styled-system'
 
 import Button from './Button'
 
 const Thing = styled.div`
-  ${type('headline')};
+  ${typographyStyles('headline')};
   ${color};
 `
 
 const Thang = styled.div`
-  ${type('caption')};
+  ${typographyStyles('caption')};
   ${color};
 `
 
@@ -37,7 +37,7 @@ const PageHeader = ({ title, subtitle, backgroundImage }) => (
       <Thing color="primary1Color" weight="normal">
         {title}
       </Thing>
-      <Thang color="primary1Color" type="footnote" weight="bold">
+      <Thang color="primary1Color" typographyStyle="footnote" weight="bold">
         {title}
         <br />More
       </Thang>
