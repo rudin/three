@@ -6,9 +6,20 @@ import './PageHeader.css'
 import Nav from './Nav'
 
 import Headline from './Headline'
+import { type } from '../theme'
 import styled from 'styled-components'
-
+import { color } from 'styled-system'
 import Button from './Primitives/Button'
+
+const Thing = styled.div`
+  ${type('headline')};
+  ${color};
+`
+
+const Thang = styled.div`
+  ${type('caption')};
+  ${color};
+`
 
 const PageHeader = ({ title, subtitle, backgroundImage }) => (
   <div className="PageHeader relative">
@@ -20,8 +31,15 @@ const PageHeader = ({ title, subtitle, backgroundImage }) => (
     </div>
     <div className="container relative">
       <Headline mb={3} color={'primary1Color'} data-aos="fade-left">
-        {title}
+        {title} lala
       </Headline>
+      <Thing color="primary1Color" weight="normal">
+        {title}
+      </Thing>
+      <Thang color="primary1Color" type="footnote" weight="bold">
+        {title}
+        <br />More
+      </Thang>
       {subtitle ? (
         <h2
           className="PageHeader--Subtitle"

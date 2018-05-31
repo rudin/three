@@ -64,30 +64,44 @@ export const space = [0, 4, 8, 16, 32, 64, 128]
 export const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64, 72, 96]
 
 const fontCollection = {
-  openSans: {
-    font: `'Open Sans', sans-serif`,
+  times: {
+    font: `'Times New Roman'`,
+    family: `'Times New Roman'`,
     normal: 300,
     bold: 700,
-    size: fontSizes[2]
+    size: fontSizes[3],
+    lineHeight: 2
+  },
+  openSans: {
+    font: `'Open Sans', sans-serif`,
+    family: `'Open Sans', sans-serif`,
+    normal: 300,
+    bold: 700,
+    size: fontSizes[2],
+    lineHeight: 1
   },
   system: {
     font: `'-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto',
   'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif`,
+    family: `'-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto',
+  'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif`,
     normal: 300,
     bold: 700,
-    size: fontSizes[2]
+    size: fontSizes[2],
+    lineHeight: 1.4
   }
 }
 
-export const fonts = {
+export const typeStyles = {
   title: fontCollection.system,
-  headline: { ...fontCollection.system, size: fontSizes[5] },
+  headline: { ...fontCollection.system, size: fontSizes[5], weight: 'bold' },
   body: fontCollection.system,
   callout: fontCollection.system,
   subhead: fontCollection.system,
   footnote: fontCollection.system,
-  caption: fontCollection.system
+  caption: fontCollection.times
 }
 
 export const radii = [0, 2, 4]
@@ -102,10 +116,31 @@ export const shadows = ['none', '0 10px 30px 0 rgba(0,0,0,.07)']
 export default {
   breakpoints,
   space,
-  fonts,
+  typeStyles,
+  fonts: typeStyles,
   fontSizes,
   fontWeights,
   colors,
   radii,
   shadows
+}
+
+export const type = (typeStyle = 'body') => ({
+  type = typeStyle,
+  weight,
+  theme: { typeStyles }
+}) => {
+  const styleSpecs = typeStyles[type]
+  return `
+    font-family: ${styleSpecs.family};
+    font-size: ${styleSpecs.size}px;
+    font-weight: ${
+      weight
+        ? styleSpecs[weight]
+        : 'weight' in styleSpecs
+          ? styleSpecs[styleSpecs.weight]
+          : styleSpecs['normal']
+    };
+    line-height: ${styleSpecs.lineHeight * styleSpecs.size}px;
+  `
 }
