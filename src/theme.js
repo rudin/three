@@ -39,22 +39,23 @@ const ColorPalette = {
 }
 
 export const colors = {
-  primary1Color: ColorPalette.green.light,
-  primary1HoverColor: ColorPalette.green.base,
-  primary2Color: ColorPalette.blue.light,
-  primary2HoverColor: ColorPalette.blue.base,
-  primary3Color: ColorPalette.grey.base,
-  primary3HoverColor: ColorPalette.grey.medium,
-  accent1Color: ColorPalette.blue.light,
-  accent2Color: ColorPalette.grey.lighter,
-  accent3Color: ColorPalette.grey.lighter,
-  textColor: ColorPalette.grey.base,
-  secondaryTextColor: ColorPalette.blue.base,
-  alternateTextColor: ColorPalette.blue.light,
-  canvasColor: ColorPalette.white.base,
-  borderColor: ColorPalette.grey.light,
-  disabledColor: ColorPalette.grey.light,
-  shadowColor: ColorPalette.black.base
+  primary: 'rgb(1, 99, 214)',
+  primaryHover: ColorPalette.green.base,
+  secondary: ColorPalette.blue.light,
+  secondaryHover: ColorPalette.blue.base,
+  alternate: ColorPalette.grey.base,
+  alternateHover: ColorPalette.grey.medium,
+  accent: ColorPalette.blue.light,
+  secondaryAccent: ColorPalette.grey.lighter,
+  alternateAccent: ColorPalette.grey.lighter,
+  text: 'rgb(74, 74, 100)',
+  primaryText: 'white',
+  secondaryText: ColorPalette.blue.base,
+  alternateText: ColorPalette.blue.light,
+  canvas: ColorPalette.white.base,
+  border: ColorPalette.grey.light,
+  disabled: ColorPalette.grey.light,
+  shadow: ColorPalette.black.base
 }
 
 export const breakpoints = [32, 48, 64, 80].map(n => n + 'em')

@@ -1,7 +1,10 @@
 import styled from 'styled-components'
+import typographyStyles from '../util/typographyStyles'
+import { space, color, fontSize } from 'styled-system'
 
 export default styled.div`
-  font-family: ${({ theme: { fonts } }) => fonts.body.font};
-  font-size: ${({ theme: { fonts } }) => fonts.body.size}px;
-  font-weight: ${({ theme: { fonts } }) => fonts.body.normal};
+  ${typographyStyles('body')};
+  ${space};
+  ${color};
+  ${fontSize};
 `

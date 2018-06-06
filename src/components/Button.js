@@ -21,15 +21,17 @@ const Button = styled.button`
     cursor: default;
   }
   border-radius: 99999px;
-  ${space} ${color}
-  ${typographyStyles('body')}
+  ${space};
+  ${color};
+  ${typographyStyles('body')};
 `
 
 Button.defaultProps = {
   m: 0,
-  px: 2,
-  py: 1,
-  bg: 'primary1Color'
+  px: 3,
+  py: 2,
+  bg: 'primary',
+  color: 'primaryText'
 }
 
 export default Button
